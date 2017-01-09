@@ -1,6 +1,6 @@
 ﻿Public Class Form1
 
-    Private Sub TbbahanpakaianBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs) Handles TbbahanpakaianBindingNavigatorSaveItem.Click
+    Private Sub TbbahanpakaianBindingNavigatorSaveItem_Click(sender As System.Object, e As System.EventArgs)
         Me.Validate()
         Me.TbbahanpakaianBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.PakaianonlineDataSet)
