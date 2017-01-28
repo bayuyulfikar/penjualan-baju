@@ -135,7 +135,7 @@ Partial Class Form2
         Me.TbkeuanganDataGridView.DataSource = Me.TbkeuanganBindingSource
         Me.TbkeuanganDataGridView.Location = New System.Drawing.Point(16, 20)
         Me.TbkeuanganDataGridView.Name = "TbkeuanganDataGridView"
-        Me.TbkeuanganDataGridView.Size = New System.Drawing.Size(542, 145)
+        Me.TbkeuanganDataGridView.Size = New System.Drawing.Size(549, 145)
         Me.TbkeuanganDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1

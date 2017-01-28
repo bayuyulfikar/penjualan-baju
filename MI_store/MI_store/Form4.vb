@@ -32,4 +32,18 @@
             Me.TableAdapterManager.UpdateAll(Me.PakaianonlineDataSet)
         End If
     End Sub
+
+    Private Sub BATALButton_Click(sender As System.Object, e As System.EventArgs) Handles BATALButton.Click
+        IdPemesananTextBox.Enabled = True
+        NamaPemesananTextBox.Enabled = True
+        NamaBarangYangDipesanTextBox.Enabled = True
+        TotalBarangYangDipesanTextBox.Enabled = True
+        TotalHargaBarangTextBox.Enabled = True
+        AlamatTujuanPengirimanTextBox.Enabled = True
+        TanggalPesanBarangDateEdit.Enabled = True
+        TanggalBarangDikirimDateEdit.Enabled = True
+        TanggalBarangDiterimaDateEdit.Enabled = True
+        PotonganHargaTextBox.Enabled = True
+
+    End Sub
 End Class

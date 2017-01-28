@@ -34,12 +34,6 @@ Partial Class Form4
         Dim TanggalBarangDiterimaLabel As System.Windows.Forms.Label
         Dim PotonganHargaLabel As System.Windows.Forms.Label
         Me.TbpemesananDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TbpemesananBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PakaianonlineDataSet = New MI_store.pakaianonlineDataSet()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -50,6 +44,12 @@ Partial Class Form4
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbpemesananBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PakaianonlineDataSet = New MI_store.pakaianonlineDataSet()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TbpemesananTableAdapter = New MI_store.pakaianonlineDataSetTableAdapters.tbpemesananTableAdapter()
         Me.TableAdapterManager = New MI_store.pakaianonlineDataSetTableAdapters.TableAdapterManager()
         Me.IdPemesananTextBox = New System.Windows.Forms.TextBox()
@@ -62,6 +62,7 @@ Partial Class Form4
         Me.TanggalBarangDikirimDateEdit = New DevExpress.XtraEditors.DateEdit()
         Me.TanggalBarangDiterimaDateEdit = New DevExpress.XtraEditors.DateEdit()
         Me.PotonganHargaTextBox = New System.Windows.Forms.TextBox()
+        Me.BATALButton = New System.Windows.Forms.Button()
         IdPemesananLabel = New System.Windows.Forms.Label()
         NamaPemesananLabel = New System.Windows.Forms.Label()
         NamaBarangYangDipesanLabel = New System.Windows.Forms.Label()
@@ -83,6 +84,96 @@ Partial Class Form4
         CType(Me.TanggalBarangDiterimaDateEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'IdPemesananLabel
+        '
+        IdPemesananLabel.AutoSize = True
+        IdPemesananLabel.Location = New System.Drawing.Point(17, 271)
+        IdPemesananLabel.Name = "IdPemesananLabel"
+        IdPemesananLabel.Size = New System.Drawing.Size(77, 13)
+        IdPemesananLabel.TabIndex = 25
+        IdPemesananLabel.Text = "id Pemesanan:"
+        '
+        'NamaPemesananLabel
+        '
+        NamaPemesananLabel.AutoSize = True
+        NamaPemesananLabel.Location = New System.Drawing.Point(17, 297)
+        NamaPemesananLabel.Name = "NamaPemesananLabel"
+        NamaPemesananLabel.Size = New System.Drawing.Size(95, 13)
+        NamaPemesananLabel.TabIndex = 27
+        NamaPemesananLabel.Text = "nama Pemesanan:"
+        '
+        'NamaBarangYangDipesanLabel
+        '
+        NamaBarangYangDipesanLabel.AutoSize = True
+        NamaBarangYangDipesanLabel.Location = New System.Drawing.Point(17, 323)
+        NamaBarangYangDipesanLabel.Name = "NamaBarangYangDipesanLabel"
+        NamaBarangYangDipesanLabel.Size = New System.Drawing.Size(143, 13)
+        NamaBarangYangDipesanLabel.TabIndex = 29
+        NamaBarangYangDipesanLabel.Text = "nama Barang Yang Dipesan:"
+        '
+        'TotalBarangYangDipesanLabel
+        '
+        TotalBarangYangDipesanLabel.AutoSize = True
+        TotalBarangYangDipesanLabel.Location = New System.Drawing.Point(17, 349)
+        TotalBarangYangDipesanLabel.Name = "TotalBarangYangDipesanLabel"
+        TotalBarangYangDipesanLabel.Size = New System.Drawing.Size(137, 13)
+        TotalBarangYangDipesanLabel.TabIndex = 31
+        TotalBarangYangDipesanLabel.Text = "total Barang Yang Dipesan:"
+        '
+        'TotalHargaBarangLabel
+        '
+        TotalHargaBarangLabel.AutoSize = True
+        TotalHargaBarangLabel.Location = New System.Drawing.Point(17, 375)
+        TotalHargaBarangLabel.Name = "TotalHargaBarangLabel"
+        TotalHargaBarangLabel.Size = New System.Drawing.Size(99, 13)
+        TotalHargaBarangLabel.TabIndex = 33
+        TotalHargaBarangLabel.Text = "total Harga Barang:"
+        '
+        'AlamatTujuanPengirimanLabel
+        '
+        AlamatTujuanPengirimanLabel.AutoSize = True
+        AlamatTujuanPengirimanLabel.Location = New System.Drawing.Point(17, 401)
+        AlamatTujuanPengirimanLabel.Name = "AlamatTujuanPengirimanLabel"
+        AlamatTujuanPengirimanLabel.Size = New System.Drawing.Size(132, 13)
+        AlamatTujuanPengirimanLabel.TabIndex = 35
+        AlamatTujuanPengirimanLabel.Text = "alamat Tujuan Pengiriman:"
+        '
+        'TanggalPesanBarangLabel
+        '
+        TanggalPesanBarangLabel.AutoSize = True
+        TanggalPesanBarangLabel.Location = New System.Drawing.Point(17, 424)
+        TanggalPesanBarangLabel.Name = "TanggalPesanBarangLabel"
+        TanggalPesanBarangLabel.Size = New System.Drawing.Size(115, 13)
+        TanggalPesanBarangLabel.TabIndex = 37
+        TanggalPesanBarangLabel.Text = "tanggal Pesan Barang:"
+        '
+        'TanggalBarangDikirimLabel
+        '
+        TanggalBarangDikirimLabel.AutoSize = True
+        TanggalBarangDikirimLabel.Location = New System.Drawing.Point(17, 450)
+        TanggalBarangDikirimLabel.Name = "TanggalBarangDikirimLabel"
+        TanggalBarangDikirimLabel.Size = New System.Drawing.Size(116, 13)
+        TanggalBarangDikirimLabel.TabIndex = 39
+        TanggalBarangDikirimLabel.Text = "tanggal Barang Dikirim:"
+        '
+        'TanggalBarangDiterimaLabel
+        '
+        TanggalBarangDiterimaLabel.AutoSize = True
+        TanggalBarangDiterimaLabel.Location = New System.Drawing.Point(17, 476)
+        TanggalBarangDiterimaLabel.Name = "TanggalBarangDiterimaLabel"
+        TanggalBarangDiterimaLabel.Size = New System.Drawing.Size(123, 13)
+        TanggalBarangDiterimaLabel.TabIndex = 41
+        TanggalBarangDiterimaLabel.Text = "tanggal Barang Diterima:"
+        '
+        'PotonganHargaLabel
+        '
+        PotonganHargaLabel.AutoSize = True
+        PotonganHargaLabel.Location = New System.Drawing.Point(17, 505)
+        PotonganHargaLabel.Name = "PotonganHargaLabel"
+        PotonganHargaLabel.Size = New System.Drawing.Size(87, 13)
+        PotonganHargaLabel.TabIndex = 43
+        PotonganHargaLabel.Text = "potongan Harga:"
+        '
         'TbpemesananDataGridView
         '
         Me.TbpemesananDataGridView.AutoGenerateColumns = False
@@ -93,52 +184,6 @@ Partial Class Form4
         Me.TbpemesananDataGridView.Name = "TbpemesananDataGridView"
         Me.TbpemesananDataGridView.Size = New System.Drawing.Size(1042, 220)
         Me.TbpemesananDataGridView.TabIndex = 1
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(542, 336)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(96, 23)
-        Me.Button4.TabIndex = 25
-        Me.Button4.Text = "EDIT"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(542, 310)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(96, 23)
-        Me.Button3.TabIndex = 24
-        Me.Button3.Text = "HAPUS"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(542, 284)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 23)
-        Me.Button2.TabIndex = 23
-        Me.Button2.Text = "SIMPAN"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(542, 258)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(96, 23)
-        Me.Button1.TabIndex = 22
-        Me.Button1.Text = "TAMBAH"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TbpemesananBindingSource
-        '
-        Me.TbpemesananBindingSource.DataMember = "tbpemesanan"
-        Me.TbpemesananBindingSource.DataSource = Me.PakaianonlineDataSet
-        '
-        'PakaianonlineDataSet
-        '
-        Me.PakaianonlineDataSet.DataSetName = "pakaianonlineDataSet"
-        Me.PakaianonlineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'DataGridViewTextBoxColumn1
         '
@@ -200,6 +245,52 @@ Partial Class Form4
         Me.DataGridViewTextBoxColumn10.HeaderText = "potonganHarga"
         Me.DataGridViewTextBoxColumn10.Name = "DataGridViewTextBoxColumn10"
         '
+        'TbpemesananBindingSource
+        '
+        Me.TbpemesananBindingSource.DataMember = "tbpemesanan"
+        Me.TbpemesananBindingSource.DataSource = Me.PakaianonlineDataSet
+        '
+        'PakaianonlineDataSet
+        '
+        Me.PakaianonlineDataSet.DataSetName = "pakaianonlineDataSet"
+        Me.PakaianonlineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(542, 336)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(96, 23)
+        Me.Button4.TabIndex = 25
+        Me.Button4.Text = "EDIT"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(542, 310)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(96, 23)
+        Me.Button3.TabIndex = 24
+        Me.Button3.Text = "HAPUS"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(542, 284)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(96, 23)
+        Me.Button2.TabIndex = 23
+        Me.Button2.Text = "SIMPAN"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(542, 258)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(96, 23)
+        Me.Button1.TabIndex = 22
+        Me.Button1.Text = "TAMBAH"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'TbpemesananTableAdapter
         '
         Me.TbpemesananTableAdapter.ClearBeforeFill = True
@@ -214,15 +305,6 @@ Partial Class Form4
         Me.TableAdapterManager.tbpemesananTableAdapter = Me.TbpemesananTableAdapter
         Me.TableAdapterManager.UpdateOrder = MI_store.pakaianonlineDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'IdPemesananLabel
-        '
-        IdPemesananLabel.AutoSize = True
-        IdPemesananLabel.Location = New System.Drawing.Point(17, 271)
-        IdPemesananLabel.Name = "IdPemesananLabel"
-        IdPemesananLabel.Size = New System.Drawing.Size(77, 13)
-        IdPemesananLabel.TabIndex = 25
-        IdPemesananLabel.Text = "id Pemesanan:"
-        '
         'IdPemesananTextBox
         '
         Me.IdPemesananTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpemesananBindingSource, "idPemesanan", True))
@@ -230,15 +312,6 @@ Partial Class Form4
         Me.IdPemesananTextBox.Name = "IdPemesananTextBox"
         Me.IdPemesananTextBox.Size = New System.Drawing.Size(361, 20)
         Me.IdPemesananTextBox.TabIndex = 26
-        '
-        'NamaPemesananLabel
-        '
-        NamaPemesananLabel.AutoSize = True
-        NamaPemesananLabel.Location = New System.Drawing.Point(17, 297)
-        NamaPemesananLabel.Name = "NamaPemesananLabel"
-        NamaPemesananLabel.Size = New System.Drawing.Size(95, 13)
-        NamaPemesananLabel.TabIndex = 27
-        NamaPemesananLabel.Text = "nama Pemesanan:"
         '
         'NamaPemesananTextBox
         '
@@ -248,15 +321,6 @@ Partial Class Form4
         Me.NamaPemesananTextBox.Size = New System.Drawing.Size(361, 20)
         Me.NamaPemesananTextBox.TabIndex = 28
         '
-        'NamaBarangYangDipesanLabel
-        '
-        NamaBarangYangDipesanLabel.AutoSize = True
-        NamaBarangYangDipesanLabel.Location = New System.Drawing.Point(17, 323)
-        NamaBarangYangDipesanLabel.Name = "NamaBarangYangDipesanLabel"
-        NamaBarangYangDipesanLabel.Size = New System.Drawing.Size(143, 13)
-        NamaBarangYangDipesanLabel.TabIndex = 29
-        NamaBarangYangDipesanLabel.Text = "nama Barang Yang Dipesan:"
-        '
         'NamaBarangYangDipesanTextBox
         '
         Me.NamaBarangYangDipesanTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpemesananBindingSource, "namaBarangYangDipesan", True))
@@ -264,15 +328,6 @@ Partial Class Form4
         Me.NamaBarangYangDipesanTextBox.Name = "NamaBarangYangDipesanTextBox"
         Me.NamaBarangYangDipesanTextBox.Size = New System.Drawing.Size(361, 20)
         Me.NamaBarangYangDipesanTextBox.TabIndex = 30
-        '
-        'TotalBarangYangDipesanLabel
-        '
-        TotalBarangYangDipesanLabel.AutoSize = True
-        TotalBarangYangDipesanLabel.Location = New System.Drawing.Point(17, 349)
-        TotalBarangYangDipesanLabel.Name = "TotalBarangYangDipesanLabel"
-        TotalBarangYangDipesanLabel.Size = New System.Drawing.Size(137, 13)
-        TotalBarangYangDipesanLabel.TabIndex = 31
-        TotalBarangYangDipesanLabel.Text = "total Barang Yang Dipesan:"
         '
         'TotalBarangYangDipesanTextBox
         '
@@ -282,15 +337,6 @@ Partial Class Form4
         Me.TotalBarangYangDipesanTextBox.Size = New System.Drawing.Size(361, 20)
         Me.TotalBarangYangDipesanTextBox.TabIndex = 32
         '
-        'TotalHargaBarangLabel
-        '
-        TotalHargaBarangLabel.AutoSize = True
-        TotalHargaBarangLabel.Location = New System.Drawing.Point(17, 375)
-        TotalHargaBarangLabel.Name = "TotalHargaBarangLabel"
-        TotalHargaBarangLabel.Size = New System.Drawing.Size(99, 13)
-        TotalHargaBarangLabel.TabIndex = 33
-        TotalHargaBarangLabel.Text = "total Harga Barang:"
-        '
         'TotalHargaBarangTextBox
         '
         Me.TotalHargaBarangTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpemesananBindingSource, "totalHargaBarang", True))
@@ -299,15 +345,6 @@ Partial Class Form4
         Me.TotalHargaBarangTextBox.Size = New System.Drawing.Size(361, 20)
         Me.TotalHargaBarangTextBox.TabIndex = 34
         '
-        'AlamatTujuanPengirimanLabel
-        '
-        AlamatTujuanPengirimanLabel.AutoSize = True
-        AlamatTujuanPengirimanLabel.Location = New System.Drawing.Point(17, 401)
-        AlamatTujuanPengirimanLabel.Name = "AlamatTujuanPengirimanLabel"
-        AlamatTujuanPengirimanLabel.Size = New System.Drawing.Size(132, 13)
-        AlamatTujuanPengirimanLabel.TabIndex = 35
-        AlamatTujuanPengirimanLabel.Text = "alamat Tujuan Pengiriman:"
-        '
         'AlamatTujuanPengirimanTextBox
         '
         Me.AlamatTujuanPengirimanTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpemesananBindingSource, "alamatTujuanPengiriman", True))
@@ -315,15 +352,6 @@ Partial Class Form4
         Me.AlamatTujuanPengirimanTextBox.Name = "AlamatTujuanPengirimanTextBox"
         Me.AlamatTujuanPengirimanTextBox.Size = New System.Drawing.Size(361, 20)
         Me.AlamatTujuanPengirimanTextBox.TabIndex = 36
-        '
-        'TanggalPesanBarangLabel
-        '
-        TanggalPesanBarangLabel.AutoSize = True
-        TanggalPesanBarangLabel.Location = New System.Drawing.Point(17, 424)
-        TanggalPesanBarangLabel.Name = "TanggalPesanBarangLabel"
-        TanggalPesanBarangLabel.Size = New System.Drawing.Size(115, 13)
-        TanggalPesanBarangLabel.TabIndex = 37
-        TanggalPesanBarangLabel.Text = "tanggal Pesan Barang:"
         '
         'TanggalPesanBarangDateEdit
         '
@@ -336,15 +364,6 @@ Partial Class Form4
         Me.TanggalPesanBarangDateEdit.Size = New System.Drawing.Size(361, 20)
         Me.TanggalPesanBarangDateEdit.TabIndex = 38
         '
-        'TanggalBarangDikirimLabel
-        '
-        TanggalBarangDikirimLabel.AutoSize = True
-        TanggalBarangDikirimLabel.Location = New System.Drawing.Point(17, 450)
-        TanggalBarangDikirimLabel.Name = "TanggalBarangDikirimLabel"
-        TanggalBarangDikirimLabel.Size = New System.Drawing.Size(116, 13)
-        TanggalBarangDikirimLabel.TabIndex = 39
-        TanggalBarangDikirimLabel.Text = "tanggal Barang Dikirim:"
-        '
         'TanggalBarangDikirimDateEdit
         '
         Me.TanggalBarangDikirimDateEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.TbpemesananBindingSource, "tanggalBarangDikirim", True))
@@ -355,15 +374,6 @@ Partial Class Form4
         Me.TanggalBarangDikirimDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.TanggalBarangDikirimDateEdit.Size = New System.Drawing.Size(361, 20)
         Me.TanggalBarangDikirimDateEdit.TabIndex = 40
-        '
-        'TanggalBarangDiterimaLabel
-        '
-        TanggalBarangDiterimaLabel.AutoSize = True
-        TanggalBarangDiterimaLabel.Location = New System.Drawing.Point(17, 476)
-        TanggalBarangDiterimaLabel.Name = "TanggalBarangDiterimaLabel"
-        TanggalBarangDiterimaLabel.Size = New System.Drawing.Size(123, 13)
-        TanggalBarangDiterimaLabel.TabIndex = 41
-        TanggalBarangDiterimaLabel.Text = "tanggal Barang Diterima:"
         '
         'TanggalBarangDiterimaDateEdit
         '
@@ -376,15 +386,6 @@ Partial Class Form4
         Me.TanggalBarangDiterimaDateEdit.Size = New System.Drawing.Size(361, 20)
         Me.TanggalBarangDiterimaDateEdit.TabIndex = 42
         '
-        'PotonganHargaLabel
-        '
-        PotonganHargaLabel.AutoSize = True
-        PotonganHargaLabel.Location = New System.Drawing.Point(17, 505)
-        PotonganHargaLabel.Name = "PotonganHargaLabel"
-        PotonganHargaLabel.Size = New System.Drawing.Size(87, 13)
-        PotonganHargaLabel.TabIndex = 43
-        PotonganHargaLabel.Text = "potongan Harga:"
-        '
         'PotonganHargaTextBox
         '
         Me.PotonganHargaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpemesananBindingSource, "potonganHarga", True))
@@ -393,11 +394,21 @@ Partial Class Form4
         Me.PotonganHargaTextBox.Size = New System.Drawing.Size(361, 20)
         Me.PotonganHargaTextBox.TabIndex = 44
         '
+        'BATALButton
+        '
+        Me.BATALButton.Location = New System.Drawing.Point(542, 365)
+        Me.BATALButton.Name = "BATALButton"
+        Me.BATALButton.Size = New System.Drawing.Size(96, 23)
+        Me.BATALButton.TabIndex = 45
+        Me.BATALButton.Text = "BATAL"
+        Me.BATALButton.UseVisualStyleBackColor = True
+        '
         'Form4
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1079, 542)
+        Me.Controls.Add(Me.BATALButton)
         Me.Controls.Add(IdPemesananLabel)
         Me.Controls.Add(Me.IdPemesananTextBox)
         Me.Controls.Add(NamaPemesananLabel)
@@ -467,4 +478,5 @@ Partial Class Form4
     Friend WithEvents TanggalBarangDikirimDateEdit As DevExpress.XtraEditors.DateEdit
     Friend WithEvents TanggalBarangDiterimaDateEdit As DevExpress.XtraEditors.DateEdit
     Friend WithEvents PotonganHargaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents BATALButton As System.Windows.Forms.Button
 End Class
