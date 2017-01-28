@@ -57,6 +57,51 @@ Partial Class Form1
         CType(Me.TbbahanpakaianDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'IdBahanPakaianLabel
+        '
+        IdBahanPakaianLabel.AutoSize = True
+        IdBahanPakaianLabel.Location = New System.Drawing.Point(12, 262)
+        IdBahanPakaianLabel.Name = "IdBahanPakaianLabel"
+        IdBahanPakaianLabel.Size = New System.Drawing.Size(94, 13)
+        IdBahanPakaianLabel.TabIndex = 2
+        IdBahanPakaianLabel.Text = "id Bahan Pakaian:"
+        '
+        'NamaBahanPakaianLabel
+        '
+        NamaBahanPakaianLabel.AutoSize = True
+        NamaBahanPakaianLabel.Location = New System.Drawing.Point(12, 288)
+        NamaBahanPakaianLabel.Name = "NamaBahanPakaianLabel"
+        NamaBahanPakaianLabel.Size = New System.Drawing.Size(112, 13)
+        NamaBahanPakaianLabel.TabIndex = 4
+        NamaBahanPakaianLabel.Text = "nama Bahan Pakaian:"
+        '
+        'HargaBahanPakaianLabel
+        '
+        HargaBahanPakaianLabel.AutoSize = True
+        HargaBahanPakaianLabel.Location = New System.Drawing.Point(12, 314)
+        HargaBahanPakaianLabel.Name = "HargaBahanPakaianLabel"
+        HargaBahanPakaianLabel.Size = New System.Drawing.Size(115, 13)
+        HargaBahanPakaianLabel.TabIndex = 6
+        HargaBahanPakaianLabel.Text = "Harga Bahan Pakaian:"
+        '
+        'StokBahanPakaianLabel
+        '
+        StokBahanPakaianLabel.AutoSize = True
+        StokBahanPakaianLabel.Location = New System.Drawing.Point(12, 340)
+        StokBahanPakaianLabel.Name = "StokBahanPakaianLabel"
+        StokBahanPakaianLabel.Size = New System.Drawing.Size(106, 13)
+        StokBahanPakaianLabel.TabIndex = 8
+        StokBahanPakaianLabel.Text = "stok Bahan Pakaian:"
+        '
+        'TbPakaian_idJenisPakaianLabel
+        '
+        TbPakaian_idJenisPakaianLabel.AutoSize = True
+        TbPakaian_idJenisPakaianLabel.Location = New System.Drawing.Point(12, 366)
+        TbPakaian_idJenisPakaianLabel.Name = "TbPakaian_idJenisPakaianLabel"
+        TbPakaian_idJenisPakaianLabel.Size = New System.Drawing.Size(141, 13)
+        TbPakaian_idJenisPakaianLabel.TabIndex = 10
+        TbPakaian_idJenisPakaianLabel.Text = "tb Pakaian id Jenis Pakaian:"
+        '
         'PakaianonlineDataSet
         '
         Me.PakaianonlineDataSet.DataSetName = "pakaianonlineDataSet"
@@ -122,15 +167,6 @@ Partial Class Form1
         Me.DataGridViewTextBoxColumn5.HeaderText = "tbPakaian_idJenisPakaian"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'IdBahanPakaianLabel
-        '
-        IdBahanPakaianLabel.AutoSize = True
-        IdBahanPakaianLabel.Location = New System.Drawing.Point(12, 262)
-        IdBahanPakaianLabel.Name = "IdBahanPakaianLabel"
-        IdBahanPakaianLabel.Size = New System.Drawing.Size(94, 13)
-        IdBahanPakaianLabel.TabIndex = 2
-        IdBahanPakaianLabel.Text = "id Bahan Pakaian:"
-        '
         'IdBahanPakaianTextBox
         '
         Me.IdBahanPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbbahanpakaianBindingSource, "idBahanPakaian", True))
@@ -138,15 +174,6 @@ Partial Class Form1
         Me.IdBahanPakaianTextBox.Name = "IdBahanPakaianTextBox"
         Me.IdBahanPakaianTextBox.Size = New System.Drawing.Size(284, 20)
         Me.IdBahanPakaianTextBox.TabIndex = 3
-        '
-        'NamaBahanPakaianLabel
-        '
-        NamaBahanPakaianLabel.AutoSize = True
-        NamaBahanPakaianLabel.Location = New System.Drawing.Point(12, 288)
-        NamaBahanPakaianLabel.Name = "NamaBahanPakaianLabel"
-        NamaBahanPakaianLabel.Size = New System.Drawing.Size(112, 13)
-        NamaBahanPakaianLabel.TabIndex = 4
-        NamaBahanPakaianLabel.Text = "nama Bahan Pakaian:"
         '
         'NamaBahanPakaianTextBox
         '
@@ -156,15 +183,6 @@ Partial Class Form1
         Me.NamaBahanPakaianTextBox.Size = New System.Drawing.Size(284, 20)
         Me.NamaBahanPakaianTextBox.TabIndex = 5
         '
-        'HargaBahanPakaianLabel
-        '
-        HargaBahanPakaianLabel.AutoSize = True
-        HargaBahanPakaianLabel.Location = New System.Drawing.Point(12, 314)
-        HargaBahanPakaianLabel.Name = "HargaBahanPakaianLabel"
-        HargaBahanPakaianLabel.Size = New System.Drawing.Size(115, 13)
-        HargaBahanPakaianLabel.TabIndex = 6
-        HargaBahanPakaianLabel.Text = "Harga Bahan Pakaian:"
-        '
         'HargaBahanPakaianTextBox
         '
         Me.HargaBahanPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbbahanpakaianBindingSource, "HargaBahanPakaian", True))
@@ -173,15 +191,6 @@ Partial Class Form1
         Me.HargaBahanPakaianTextBox.Size = New System.Drawing.Size(284, 20)
         Me.HargaBahanPakaianTextBox.TabIndex = 7
         '
-        'StokBahanPakaianLabel
-        '
-        StokBahanPakaianLabel.AutoSize = True
-        StokBahanPakaianLabel.Location = New System.Drawing.Point(12, 340)
-        StokBahanPakaianLabel.Name = "StokBahanPakaianLabel"
-        StokBahanPakaianLabel.Size = New System.Drawing.Size(106, 13)
-        StokBahanPakaianLabel.TabIndex = 8
-        StokBahanPakaianLabel.Text = "stok Bahan Pakaian:"
-        '
         'StokBahanPakaianTextBox
         '
         Me.StokBahanPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbbahanpakaianBindingSource, "stokBahanPakaian", True))
@@ -189,15 +198,6 @@ Partial Class Form1
         Me.StokBahanPakaianTextBox.Name = "StokBahanPakaianTextBox"
         Me.StokBahanPakaianTextBox.Size = New System.Drawing.Size(284, 20)
         Me.StokBahanPakaianTextBox.TabIndex = 9
-        '
-        'TbPakaian_idJenisPakaianLabel
-        '
-        TbPakaian_idJenisPakaianLabel.AutoSize = True
-        TbPakaian_idJenisPakaianLabel.Location = New System.Drawing.Point(12, 366)
-        TbPakaian_idJenisPakaianLabel.Name = "TbPakaian_idJenisPakaianLabel"
-        TbPakaian_idJenisPakaianLabel.Size = New System.Drawing.Size(141, 13)
-        TbPakaian_idJenisPakaianLabel.TabIndex = 10
-        TbPakaian_idJenisPakaianLabel.Text = "tb Pakaian id Jenis Pakaian:"
         '
         'TbPakaian_idJenisPakaianTextBox
         '

@@ -27,6 +27,7 @@ Partial Class Form3
         Dim JenisPakaianLabel As System.Windows.Forms.Label
         Dim StokJenisPakaianLabel As System.Windows.Forms.Label
         Dim StokBahanPakaianLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.PakaianonlineDataSet = New MI_store.pakaianonlineDataSet()
         Me.TbpakaianBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TbpakaianTableAdapter = New MI_store.pakaianonlineDataSetTableAdapters.tbpakaianTableAdapter()
@@ -44,6 +45,7 @@ Partial Class Form3
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.BATALButton = New System.Windows.Forms.Button()
         IdJenisPakaianLabel = New System.Windows.Forms.Label()
         JenisPakaianLabel = New System.Windows.Forms.Label()
         StokJenisPakaianLabel = New System.Windows.Forms.Label()
@@ -52,6 +54,42 @@ Partial Class Form3
         CType(Me.TbpakaianBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbpakaianDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'IdJenisPakaianLabel
+        '
+        IdJenisPakaianLabel.AutoSize = True
+        IdJenisPakaianLabel.Location = New System.Drawing.Point(27, 187)
+        IdJenisPakaianLabel.Name = "IdJenisPakaianLabel"
+        IdJenisPakaianLabel.Size = New System.Drawing.Size(103, 13)
+        IdJenisPakaianLabel.TabIndex = 2
+        IdJenisPakaianLabel.Text = "ID JENIS PAKAIAN:"
+        '
+        'JenisPakaianLabel
+        '
+        JenisPakaianLabel.AutoSize = True
+        JenisPakaianLabel.Location = New System.Drawing.Point(27, 213)
+        JenisPakaianLabel.Name = "JenisPakaianLabel"
+        JenisPakaianLabel.Size = New System.Drawing.Size(89, 13)
+        JenisPakaianLabel.TabIndex = 4
+        JenisPakaianLabel.Text = "JENIS PAKAIAN:"
+        '
+        'StokJenisPakaianLabel
+        '
+        StokJenisPakaianLabel.AutoSize = True
+        StokJenisPakaianLabel.Location = New System.Drawing.Point(27, 239)
+        StokJenisPakaianLabel.Name = "StokJenisPakaianLabel"
+        StokJenisPakaianLabel.Size = New System.Drawing.Size(121, 13)
+        StokJenisPakaianLabel.TabIndex = 6
+        StokJenisPakaianLabel.Text = "STOK JENIS PAKAIAN:"
+        '
+        'StokBahanPakaianLabel
+        '
+        StokBahanPakaianLabel.AutoSize = True
+        StokBahanPakaianLabel.Location = New System.Drawing.Point(27, 265)
+        StokBahanPakaianLabel.Name = "StokBahanPakaianLabel"
+        StokBahanPakaianLabel.Size = New System.Drawing.Size(128, 13)
+        StokBahanPakaianLabel.TabIndex = 8
+        StokBahanPakaianLabel.Text = "STOK BAHAN PAKAIAN:"
         '
         'PakaianonlineDataSet
         '
@@ -85,7 +123,7 @@ Partial Class Form3
         Me.TbpakaianDataGridView.DataSource = Me.TbpakaianBindingSource
         Me.TbpakaianDataGridView.Location = New System.Drawing.Point(12, 28)
         Me.TbpakaianDataGridView.Name = "TbpakaianDataGridView"
-        Me.TbpakaianDataGridView.Size = New System.Drawing.Size(445, 136)
+        Me.TbpakaianDataGridView.Size = New System.Drawing.Size(481, 136)
         Me.TbpakaianDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -112,77 +150,41 @@ Partial Class Form3
         Me.DataGridViewTextBoxColumn4.HeaderText = "stokBahanPakaian"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'IdJenisPakaianLabel
-        '
-        IdJenisPakaianLabel.AutoSize = True
-        IdJenisPakaianLabel.Location = New System.Drawing.Point(27, 187)
-        IdJenisPakaianLabel.Name = "IdJenisPakaianLabel"
-        IdJenisPakaianLabel.Size = New System.Drawing.Size(87, 13)
-        IdJenisPakaianLabel.TabIndex = 2
-        IdJenisPakaianLabel.Text = "id Jenis Pakaian:"
-        '
         'IdJenisPakaianTextBox
         '
         Me.IdJenisPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpakaianBindingSource, "idJenisPakaian", True))
-        Me.IdJenisPakaianTextBox.Location = New System.Drawing.Point(139, 184)
+        Me.IdJenisPakaianTextBox.Location = New System.Drawing.Point(154, 184)
         Me.IdJenisPakaianTextBox.Name = "IdJenisPakaianTextBox"
         Me.IdJenisPakaianTextBox.Size = New System.Drawing.Size(222, 20)
         Me.IdJenisPakaianTextBox.TabIndex = 3
         '
-        'JenisPakaianLabel
-        '
-        JenisPakaianLabel.AutoSize = True
-        JenisPakaianLabel.Location = New System.Drawing.Point(27, 213)
-        JenisPakaianLabel.Name = "JenisPakaianLabel"
-        JenisPakaianLabel.Size = New System.Drawing.Size(76, 13)
-        JenisPakaianLabel.TabIndex = 4
-        JenisPakaianLabel.Text = "Jenis Pakaian:"
-        '
         'JenisPakaianTextBox
         '
         Me.JenisPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpakaianBindingSource, "JenisPakaian", True))
-        Me.JenisPakaianTextBox.Location = New System.Drawing.Point(139, 210)
+        Me.JenisPakaianTextBox.Location = New System.Drawing.Point(154, 210)
         Me.JenisPakaianTextBox.Name = "JenisPakaianTextBox"
         Me.JenisPakaianTextBox.Size = New System.Drawing.Size(222, 20)
         Me.JenisPakaianTextBox.TabIndex = 5
         '
-        'StokJenisPakaianLabel
-        '
-        StokJenisPakaianLabel.AutoSize = True
-        StokJenisPakaianLabel.Location = New System.Drawing.Point(27, 239)
-        StokJenisPakaianLabel.Name = "StokJenisPakaianLabel"
-        StokJenisPakaianLabel.Size = New System.Drawing.Size(99, 13)
-        StokJenisPakaianLabel.TabIndex = 6
-        StokJenisPakaianLabel.Text = "stok Jenis Pakaian:"
-        '
         'StokJenisPakaianTextBox
         '
         Me.StokJenisPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpakaianBindingSource, "stokJenisPakaian", True))
-        Me.StokJenisPakaianTextBox.Location = New System.Drawing.Point(139, 236)
+        Me.StokJenisPakaianTextBox.Location = New System.Drawing.Point(154, 236)
         Me.StokJenisPakaianTextBox.Name = "StokJenisPakaianTextBox"
         Me.StokJenisPakaianTextBox.Size = New System.Drawing.Size(222, 20)
         Me.StokJenisPakaianTextBox.TabIndex = 7
         '
-        'StokBahanPakaianLabel
-        '
-        StokBahanPakaianLabel.AutoSize = True
-        StokBahanPakaianLabel.Location = New System.Drawing.Point(27, 265)
-        StokBahanPakaianLabel.Name = "StokBahanPakaianLabel"
-        StokBahanPakaianLabel.Size = New System.Drawing.Size(106, 13)
-        StokBahanPakaianLabel.TabIndex = 8
-        StokBahanPakaianLabel.Text = "stok Bahan Pakaian:"
-        '
         'StokBahanPakaianTextBox
         '
         Me.StokBahanPakaianTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbpakaianBindingSource, "stokBahanPakaian", True))
-        Me.StokBahanPakaianTextBox.Location = New System.Drawing.Point(139, 262)
+        Me.StokBahanPakaianTextBox.Location = New System.Drawing.Point(154, 262)
         Me.StokBahanPakaianTextBox.Name = "StokBahanPakaianTextBox"
         Me.StokBahanPakaianTextBox.Size = New System.Drawing.Size(222, 20)
         Me.StokBahanPakaianTextBox.TabIndex = 9
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(367, 255)
+        Me.Button4.Location = New System.Drawing.Point(382, 260)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(96, 23)
         Me.Button4.TabIndex = 19
@@ -191,7 +193,7 @@ Partial Class Form3
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(367, 229)
+        Me.Button3.Location = New System.Drawing.Point(382, 234)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(96, 23)
         Me.Button3.TabIndex = 18
@@ -200,7 +202,7 @@ Partial Class Form3
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(367, 203)
+        Me.Button2.Location = New System.Drawing.Point(382, 208)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(96, 23)
         Me.Button2.TabIndex = 17
@@ -209,18 +211,31 @@ Partial Class Form3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(367, 177)
+        Me.Button1.Location = New System.Drawing.Point(382, 182)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(96, 23)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "TAMBAH"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'BATALButton
+        '
+        Me.BATALButton.Location = New System.Drawing.Point(382, 286)
+        Me.BATALButton.Name = "BATALButton"
+        Me.BATALButton.Size = New System.Drawing.Size(96, 23)
+        Me.BATALButton.TabIndex = 20
+        Me.BATALButton.Text = "BATAL"
+        Me.BATALButton.UseVisualStyleBackColor = True
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(643, 349)
+        Me.AutoSize = True
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.ClientSize = New System.Drawing.Size(508, 349)
+        Me.Controls.Add(Me.BATALButton)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -234,8 +249,10 @@ Partial Class Form3
         Me.Controls.Add(StokBahanPakaianLabel)
         Me.Controls.Add(Me.StokBahanPakaianTextBox)
         Me.Controls.Add(Me.TbpakaianDataGridView)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Text = "TABEL PAKAIAN"
         CType(Me.PakaianonlineDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbpakaianBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbpakaianDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
@@ -260,4 +277,5 @@ Partial Class Form3
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents BATALButton As System.Windows.Forms.Button
 End Class

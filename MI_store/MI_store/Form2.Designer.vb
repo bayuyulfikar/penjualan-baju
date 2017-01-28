@@ -58,6 +58,51 @@ Partial Class Form2
         CType(Me.TbPemesanan_idPemesananSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'TanggalBulanTahunLabel
+        '
+        TanggalBulanTahunLabel.AutoSize = True
+        TanggalBulanTahunLabel.Location = New System.Drawing.Point(13, 178)
+        TanggalBulanTahunLabel.Name = "TanggalBulanTahunLabel"
+        TanggalBulanTahunLabel.Size = New System.Drawing.Size(109, 13)
+        TanggalBulanTahunLabel.TabIndex = 2
+        TanggalBulanTahunLabel.Text = "tanggal Bulan Tahun:"
+        '
+        'PemasukanLabel
+        '
+        PemasukanLabel.AutoSize = True
+        PemasukanLabel.Location = New System.Drawing.Point(13, 204)
+        PemasukanLabel.Name = "PemasukanLabel"
+        PemasukanLabel.Size = New System.Drawing.Size(65, 13)
+        PemasukanLabel.TabIndex = 4
+        PemasukanLabel.Text = "pemasukan:"
+        '
+        'PengeluaranLabel
+        '
+        PengeluaranLabel.AutoSize = True
+        PengeluaranLabel.Location = New System.Drawing.Point(13, 230)
+        PengeluaranLabel.Name = "PengeluaranLabel"
+        PengeluaranLabel.Size = New System.Drawing.Size(69, 13)
+        PengeluaranLabel.TabIndex = 6
+        PengeluaranLabel.Text = "pengeluaran:"
+        '
+        'Laba___rugiLabel
+        '
+        Laba___rugiLabel.AutoSize = True
+        Laba___rugiLabel.Location = New System.Drawing.Point(13, 256)
+        Laba___rugiLabel.Name = "Laba___rugiLabel"
+        Laba___rugiLabel.Size = New System.Drawing.Size(58, 13)
+        Laba___rugiLabel.TabIndex = 8
+        Laba___rugiLabel.Text = "laba / rugi:"
+        '
+        'TbPemesanan_idPemesananLabel
+        '
+        TbPemesanan_idPemesananLabel.AutoSize = True
+        TbPemesanan_idPemesananLabel.Location = New System.Drawing.Point(13, 279)
+        TbPemesanan_idPemesananLabel.Name = "TbPemesanan_idPemesananLabel"
+        TbPemesanan_idPemesananLabel.Size = New System.Drawing.Size(148, 13)
+        TbPemesanan_idPemesananLabel.TabIndex = 10
+        TbPemesanan_idPemesananLabel.Text = "tb Pemesanan id Pemesanan:"
+        '
         'PakaianonlineDataSet
         '
         Me.PakaianonlineDataSet.DataSetName = "pakaianonlineDataSet"
@@ -123,15 +168,6 @@ Partial Class Form2
         Me.DataGridViewTextBoxColumn5.HeaderText = "tbPemesanan_idPemesanan"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
-        'TanggalBulanTahunLabel
-        '
-        TanggalBulanTahunLabel.AutoSize = True
-        TanggalBulanTahunLabel.Location = New System.Drawing.Point(13, 178)
-        TanggalBulanTahunLabel.Name = "TanggalBulanTahunLabel"
-        TanggalBulanTahunLabel.Size = New System.Drawing.Size(109, 13)
-        TanggalBulanTahunLabel.TabIndex = 2
-        TanggalBulanTahunLabel.Text = "tanggal Bulan Tahun:"
-        '
         'TanggalBulanTahunTextBox
         '
         Me.TanggalBulanTahunTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbkeuanganBindingSource, "tanggalBulanTahun", True))
@@ -139,15 +175,6 @@ Partial Class Form2
         Me.TanggalBulanTahunTextBox.Name = "TanggalBulanTahunTextBox"
         Me.TanggalBulanTahunTextBox.Size = New System.Drawing.Size(268, 20)
         Me.TanggalBulanTahunTextBox.TabIndex = 3
-        '
-        'PemasukanLabel
-        '
-        PemasukanLabel.AutoSize = True
-        PemasukanLabel.Location = New System.Drawing.Point(13, 204)
-        PemasukanLabel.Name = "PemasukanLabel"
-        PemasukanLabel.Size = New System.Drawing.Size(65, 13)
-        PemasukanLabel.TabIndex = 4
-        PemasukanLabel.Text = "pemasukan:"
         '
         'PemasukanTextBox
         '
@@ -157,15 +184,6 @@ Partial Class Form2
         Me.PemasukanTextBox.Size = New System.Drawing.Size(268, 20)
         Me.PemasukanTextBox.TabIndex = 5
         '
-        'PengeluaranLabel
-        '
-        PengeluaranLabel.AutoSize = True
-        PengeluaranLabel.Location = New System.Drawing.Point(13, 230)
-        PengeluaranLabel.Name = "PengeluaranLabel"
-        PengeluaranLabel.Size = New System.Drawing.Size(69, 13)
-        PengeluaranLabel.TabIndex = 6
-        PengeluaranLabel.Text = "pengeluaran:"
-        '
         'PengeluaranTextBox
         '
         Me.PengeluaranTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbkeuanganBindingSource, "pengeluaran", True))
@@ -174,15 +192,6 @@ Partial Class Form2
         Me.PengeluaranTextBox.Size = New System.Drawing.Size(268, 20)
         Me.PengeluaranTextBox.TabIndex = 7
         '
-        'Laba___rugiLabel
-        '
-        Laba___rugiLabel.AutoSize = True
-        Laba___rugiLabel.Location = New System.Drawing.Point(13, 256)
-        Laba___rugiLabel.Name = "Laba___rugiLabel"
-        Laba___rugiLabel.Size = New System.Drawing.Size(58, 13)
-        Laba___rugiLabel.TabIndex = 8
-        Laba___rugiLabel.Text = "laba / rugi:"
-        '
         'Laba___rugiTextBox
         '
         Me.Laba___rugiTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.TbkeuanganBindingSource, "laba / rugi", True))
@@ -190,15 +199,6 @@ Partial Class Form2
         Me.Laba___rugiTextBox.Name = "Laba___rugiTextBox"
         Me.Laba___rugiTextBox.Size = New System.Drawing.Size(268, 20)
         Me.Laba___rugiTextBox.TabIndex = 9
-        '
-        'TbPemesanan_idPemesananLabel
-        '
-        TbPemesanan_idPemesananLabel.AutoSize = True
-        TbPemesanan_idPemesananLabel.Location = New System.Drawing.Point(13, 279)
-        TbPemesanan_idPemesananLabel.Name = "TbPemesanan_idPemesananLabel"
-        TbPemesanan_idPemesananLabel.Size = New System.Drawing.Size(148, 13)
-        TbPemesanan_idPemesananLabel.TabIndex = 10
-        TbPemesanan_idPemesananLabel.Text = "tb Pemesanan id Pemesanan:"
         '
         'TbPemesanan_idPemesananSpinEdit
         '
